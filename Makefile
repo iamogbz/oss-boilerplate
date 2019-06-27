@@ -6,9 +6,8 @@ upstream:
 
 eject:
 	@git fetch --all --prune
-	@git pull upstream master
 	@git checkout -b boilerplate-ejection
-	@git pull upstream boilerplate-ejection --allow-unrelated-histories --squash -m 'chore: make eject'
+	@git pull upstream boilerplate-ejection --rebase
 
 ifndef VERBOSE
 .SILENT:

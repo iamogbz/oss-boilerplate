@@ -4,7 +4,7 @@ upstream:
 	@git push --all
 	@echo "upstream: remote successfully configured"
 
-eject: upstream
+eject:
 	@git fetch --all --prune
 	@git pull upstream master
 	@git checkout -b boilerplate-ejection

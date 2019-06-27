@@ -7,7 +7,7 @@ upstream:
 eject:
 	@git fetch --all --prune
 	@git checkout -b boilerplate-ejection
-	@git pull upstream boilerplate-ejection --rebase
+	@git pull upstream boilerplate-ejection --rebase -Xours
 
 ifndef VERBOSE
 .SILENT:

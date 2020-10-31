@@ -13,13 +13,9 @@ jobs:
     if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/github-script@v2
+    - uses: unsplash/comment-on-pr@v1.2.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       with:
-        github-token: ${{ secrets.GH_TOKEN }}
-        script: |
-          await github.issues.createComment({
-            owner: context.payload.repository.owner.login,
-            repo: context.payload.repository.name,
-            issue_number: context.payload.pull_request.number,
-            body: '@dependabot merge'
-          })
+        msg: "@dependabot merge"
+        check_for_duplicate_msg: true

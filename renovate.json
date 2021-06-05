@@ -1,0 +1,18 @@
+{
+    "extends": [
+        "config:base",
+        ":preserveSemverRanges"
+    ],
+    "onboarding": false,
+    "packageRules": [
+        {
+            "automerge": true,
+            "matchBaseBranches": [
+                "main"
+            ]
+        }
+    ],
+    "repositories": [
+        "iamogbz/oss-boilerplate"
+    ]
+}

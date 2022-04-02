@@ -7,6 +7,6 @@ jobs:
     if: github.actor == 'iamogbz' || github.actor == 'renovate-bot'
     runs-on: ubuntu-latest
     steps:
-    - uses: hmarr/auto-approve-action@v2.1.0
+    - uses: hmarr/auto-approve-action@v2.2.0
       with:
         github-token: "${{ secrets.GITHUB_TOKEN }}"
